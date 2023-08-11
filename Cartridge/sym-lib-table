@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "vectrex-eagle-import")(type "KiCad")(uri "${KIPRJMOD}/vectrex-eagle-import.kicad_sym")(options "")(descr ""))
+  (lib (name "EEPROM")(type "Legacy")(uri "${KIPRJMOD}/Memory_EEPROM/Memory_EEPROM.lib")(options "")(descr ""))
+)

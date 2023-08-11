@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1411537227"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FuC:\lazarus\packager\units\x86_64-win64 &quot;-FuC:\Users\Guimli\Documents\Vectrex\PCB Cartridge\GUI\synapse40\source\lib\&quot; &quot;-FUC:\Users\Guimli\Documents\Vectrex\PCB Cartridge\GUI\synapse40\source\lib\lib\x86_64-win64\&quot; laz_synapse.pas"/>
+</CONFIG>

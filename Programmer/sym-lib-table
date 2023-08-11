@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "MCP23S08")(type "KiCad")(uri "${KIPRJMOD}/Interface_Expansion.kicad_sym")(options "")(descr ""))
+  (lib (name "Vectrex")(type "KiCad")(uri "${KIPRJMOD}/vectrex-eagle-import.kicad_sym")(options "")(descr ""))
+  (lib (name "MCP23S08-xP")(type "KiCad")(uri "C:/Users/Guimli/Documents/Vectrex/Vectrex Advanced Test Cartridge/libs/MCP23S08-xP.kicad_sym")(options "")(descr ""))
+)

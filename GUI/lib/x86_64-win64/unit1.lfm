@@ -1,0 +1,275 @@
+object FormVectrexCartridgeProgrammer: TFormVectrexCartridgeProgrammer
+  Left = 1522
+  Height = 340
+  Top = 599
+  Width = 580
+  Caption = 'Vectrex Cartridge Programmer'
+  ClientHeight = 340
+  ClientWidth = 580
+  Constraints.MinHeight = 340
+  Constraints.MinWidth = 580
+  OnActivate = FormActivate
+  LCLVersion = '2.2.0.4'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 340
+    Top = 0
+    Width = 580
+    ActivePage = TabReadWrite
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object TabReadWrite: TTabSheet
+      Caption = 'Read/Write'
+      ClientHeight = 312
+      ClientWidth = 572
+      object GroupBoxControl: TGroupBox
+        Left = 0
+        Height = 184
+        Top = 0
+        Width = 572
+        Align = alTop
+        Caption = 'Control'
+        ClientHeight = 164
+        ClientWidth = 568
+        TabOrder = 0
+        object StaticTextFile: TStaticText
+          Left = 15
+          Height = 17
+          Top = 128
+          Width = 538
+          BorderStyle = sbsSingle
+          TabOrder = 0
+        end
+        object ButtonWriteEEPROM: TBitBtn
+          Left = 384
+          Height = 30
+          Top = 82
+          Width = 170
+          Caption = 'Write EEPROM'
+          OnClick = ButtonWriteEEPROMClick
+          TabOrder = 1
+        end
+        object ButtonReadRom: TBitBtn
+          Left = 383
+          Height = 32
+          Top = 40
+          Width = 170
+          Caption = 'Read ROM / EEPROM'
+          OnClick = ButtonReadRomClick
+          TabOrder = 2
+        end
+        object ProgressBar: TProgressBar
+          Left = 215
+          Height = 16
+          Top = 96
+          Width = 140
+          TabOrder = 3
+        end
+        object LabelSize: TLabel
+          Left = 215
+          Height = 15
+          Top = 43
+          Width = 42
+          Alignment = taRightJustify
+          AutoSize = False
+          Caption = 'Size :'
+        end
+        object ComboBoxSize: TComboBox
+          Left = 261
+          Height = 23
+          Top = 40
+          Width = 94
+          ItemHeight = 15
+          ItemIndex = 1
+          Items.Strings = (
+            'Auto-detect'
+            '1K'
+            '2K'
+            '4K'
+            '8K'
+            '16K'
+            '32K'
+          )
+          OnChange = ComboBoxSizeChange
+          TabOrder = 4
+          Text = '1K'
+        end
+        object BitBtn2: TBitBtn
+          Left = 15
+          Height = 30
+          Top = 82
+          Width = 169
+          Caption = 'Write File'
+          OnClick = BitBtn2Click
+          TabOrder = 5
+        end
+        object BitBtn1: TBitBtn
+          Left = 15
+          Height = 32
+          Top = 40
+          Width = 169
+          Caption = 'Open File'
+          OnClick = BitBtn1Click
+          TabOrder = 6
+        end
+        object ComboBoxCOM: TComboBox
+          Left = 56
+          Height = 23
+          Top = 2
+          Width = 72
+          ItemHeight = 15
+          TabOrder = 7
+          Text = 'ComboBoxCOM'
+        end
+        object LabelCOM: TLabel
+          Left = 15
+          Height = 15
+          Top = 5
+          Width = 37
+          Alignment = taRightJustify
+          AutoSize = False
+          Caption = 'COM :'
+        end
+        object ButtonCOMRefresh: TBitBtn
+          Left = 144
+          Height = 23
+          Top = 2
+          Width = 80
+          Caption = 'Refresh'
+          OnClick = ButtonCOMRefreshClick
+          TabOrder = 8
+        end
+        object ButtonCOMConnect: TBitBtn
+          Left = 240
+          Height = 23
+          Top = 2
+          Width = 100
+          Caption = 'Connect'
+          OnClick = ButtonCOMConnectClick
+          TabOrder = 9
+        end
+        object ButtonCOMDisconnect: TBitBtn
+          Left = 352
+          Height = 23
+          Top = 2
+          Width = 101
+          Caption = 'Disconnect'
+          Enabled = False
+          OnClick = ButtonCOMDisconnectClick
+          TabOrder = 10
+        end
+        object LabelCRC: TLabel
+          Left = 215
+          Height = 15
+          Top = 70
+          Width = 140
+          AutoSize = False
+          Caption = 'CRC :'
+        end
+      end
+      object GroupBoxLog: TGroupBox
+        Left = 0
+        Height = 128
+        Top = 184
+        Width = 572
+        Align = alClient
+        Caption = 'Log'
+        ClientHeight = 108
+        ClientWidth = 568
+        TabOrder = 1
+        object MemoLog: TMemo
+          Left = 0
+          Height = 80
+          Top = 28
+          Width = 568
+          Align = alClient
+          ReadOnly = True
+          ScrollBars = ssAutoBoth
+          TabOrder = 0
+          WordWrap = False
+        end
+        object ToolBarLog: TToolBar
+          Left = 2
+          Height = 24
+          Top = 2
+          Width = 564
+          BorderSpacing.Around = 2
+          Caption = 'ToolBarLog'
+          TabOrder = 1
+          object ToolButtonClearLog: TToolButton
+            Left = 1
+            Top = 2
+            Caption = 'ToolButtonClearLog'
+            OnClick = ToolButtonClearLogClick
+          end
+          object ToolButtonAutoScroll: TToolButton
+            Left = 24
+            Top = 2
+            Caption = 'ToolButtonAutoScroll'
+            Style = tbsCheck
+          end
+        end
+      end
+    end
+    object TabHexView: TTabSheet
+      Caption = 'HexView'
+      ClientHeight = 312
+      ClientWidth = 572
+      object MemoHexView: TMemo
+        Left = 0
+        Height = 312
+        Top = 0
+        Width = 572
+        Align = alClient
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Lucida Console'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+        WordWrap = False
+      end
+    end
+    object TabAbout: TTabSheet
+      Caption = 'About'
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Filter = 'ROM|*.vec;*.bin|Any|*.*'
+    Left = 70
+    Top = 128
+  end
+  object SaveDialog: TSaveDialog
+    Filter = 'ROM|*.vec;*.bin|Any|*.*'
+    Left = 152
+    Top = 129
+  end
+  object LazSerial: TLazSerial
+    Active = False
+    BaudRate = br115200
+    DataBits = db8bits
+    Parity = pNone
+    FlowControl = fcNone
+    StopBits = sbOne
+    SynSer.Tag = 0
+    SynSer.Handle = -1
+    SynSer.RaiseExcept = False
+    SynSer.TestDSR = False
+    SynSer.TestCTS = False
+    SynSer.MaxLineLength = 0
+    SynSer.DeadlockTimeout = 30000
+    SynSer.LinuxLock = False
+    SynSer.ConvertLineEnd = False
+    SynSer.AtTimeout = 1000
+    SynSer.InterPacketTimeout = True
+    Device = 'COM1'
+    RcvLineCRLF = False
+    OnRxData = LazSerialRxData
+    Left = 232
+    Top = 129
+  end
+end

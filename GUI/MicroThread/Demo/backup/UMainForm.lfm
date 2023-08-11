@@ -1,0 +1,383 @@
+object MainForm: TMainForm
+  Left = 0
+  Height = 533
+  Top = 13
+  Width = 792
+  Caption = 'MicroThreading demo'
+  ClientHeight = 514
+  ClientWidth = 792
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  LCLVersion = '0.9.31'
+  object PageControl1: TPageControl
+    Left = 8
+    Height = 500
+    Top = 8
+    Width = 778
+    ActivePage = TabSheet1
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 1
+    TabOrder = 0
+    object TabSheet2: TTabSheet
+      Caption = 'Scheduler state'
+      ClientHeight = 474
+      ClientWidth = 794
+      object GroupBox1: TGroupBox
+        Left = 6
+        Height = 123
+        Top = 143
+        Width = 205
+        Caption = 'State'
+        ClientHeight = 105
+        ClientWidth = 201
+        TabOrder = 0
+        object Label15: TLabel
+          Left = 9
+          Height = 14
+          Top = 52
+          Width = 73
+          Caption = 'Main thread id:'
+          ParentColor = False
+        end
+        object Label16: TLabel
+          Left = 142
+          Height = 14
+          Top = 52
+          Width = 13
+          Caption = '    '
+          ParentColor = False
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 6
+        Height = 126
+        Top = 7
+        Width = 206
+        Caption = 'Control'
+        ClientHeight = 108
+        ClientWidth = 202
+        TabOrder = 1
+        object ButtonSchedulerStartStop: TButton
+          Left = 8
+          Height = 25
+          Top = 7
+          Width = 103
+          Caption = 'Start scheduler'
+          OnClick = ButtonSchedulerStartStopClick
+          TabOrder = 0
+        end
+        object Label3: TLabel
+          Left = 8
+          Height = 14
+          Top = 46
+          Width = 69
+          Caption = 'Thread count:'
+          ParentColor = False
+        end
+        object SpinEdit2: TSpinEdit
+          Left = 96
+          Height = 21
+          Top = 39
+          Width = 74
+          OnChange = SpinEdit2Change
+          TabOrder = 1
+        end
+        object CheckBoxUseMainThread: TCheckBox
+          Left = 10
+          Height = 17
+          Top = 64
+          Width = 98
+          Caption = 'Use main thread'
+          OnChange = CheckBoxUseMainThreadChange
+          TabOrder = 2
+        end
+      end
+      object Button4: TButton
+        Left = 226
+        Height = 25
+        Top = 17
+        Width = 123
+        Caption = 'Show manager'
+        OnClick = Button4Click
+        TabOrder = 2
+      end
+    end
+    object TabSheet1: TTabSheet
+      Caption = 'Job control'
+      ClientHeight = 474
+      ClientWidth = 770
+      object ButtonAddWorkers: TButton
+        Left = 10
+        Height = 25
+        Top = 7
+        Width = 120
+        Caption = 'Add workers'
+        OnClick = ButtonAddWorkersClick
+        TabOrder = 0
+      end
+      object ButtonClearMicroThreads: TButton
+        Left = 10
+        Height = 25
+        Top = 266
+        Width = 104
+        Caption = 'Clear jobs'
+        OnClick = ButtonClearMicroThreadsClick
+        TabOrder = 1
+      end
+      object Label4: TLabel
+        Left = 140
+        Height = 14
+        Top = 14
+        Width = 34
+        Caption = 'Count:'
+        ParentColor = False
+      end
+      object SpinEdit1: TSpinEdit
+        Left = 204
+        Height = 21
+        Top = 11
+        Width = 74
+        MaxValue = 100000
+        MinValue = 1
+        TabStop = False
+        TabOrder = 2
+        Value = 2
+      end
+      object Memo1: TMemo
+        Left = 316
+        Height = 225
+        Top = 14
+        Width = 294
+        Anchors = [akTop, akLeft, akBottom]
+        ScrollBars = ssAutoBoth
+        TabOrder = 3
+      end
+      object Button1: TButton
+        Left = 316
+        Height = 25
+        Top = 266
+        Width = 75
+        Caption = 'Clear memo'
+        OnClick = Button1Click
+        TabOrder = 4
+      end
+      object Label12: TLabel
+        Left = 140
+        Height = 14
+        Top = 38
+        Width = 52
+        Caption = 'Iterations:'
+        ParentColor = False
+      end
+      object SpinEdit3: TSpinEdit
+        Left = 204
+        Height = 21
+        Top = 36
+        Width = 74
+        MaxValue = 1000000000
+        OnChange = SpinEdit3Change
+        TabOrder = 5
+        Value = 10000000
+      end
+      object GroupBox3: TGroupBox
+        Left = 10
+        Height = 185
+        Top = 74
+        Width = 292
+        Caption = 'Do inside jobs'
+        ClientHeight = 167
+        ClientWidth = 288
+        TabOrder = 6
+        object CheckBox1: TCheckBox
+          Left = 4
+          Height = 17
+          Top = 9
+          Width = 66
+          Caption = 'Use sleep'
+          OnChange = CheckBox1Change
+          TabOrder = 0
+        end
+        object SpinEdit4: TSpinEdit
+          Left = 149
+          Height = 21
+          Top = 8
+          Width = 90
+          MaxValue = 100000
+          OnChange = CheckBox1Change
+          TabOrder = 1
+          Value = 100
+        end
+        object Label14: TLabel
+          Left = 242
+          Height = 14
+          Top = 15
+          Width = 14
+          Caption = 'ms'
+          ParentColor = False
+        end
+        object CheckBox2: TCheckBox
+          Left = 5
+          Height = 17
+          Top = 32
+          Width = 112
+          Caption = 'Write test to memo'
+          OnChange = CheckBox2Change
+          TabOrder = 2
+        end
+        object CheckBox3: TCheckBox
+          Left = 5
+          Height = 17
+          Top = 56
+          Width = 90
+          Caption = 'Wait for event'
+          OnChange = CheckBox3Change
+          TabOrder = 3
+        end
+        object Button3: TButton
+          Left = 226
+          Height = 25
+          Top = 51
+          Width = 51
+          Caption = 'Signal'
+          OnClick = Button3Click
+          TabOrder = 4
+        end
+        object SpinEdit5: TSpinEdit
+          Left = 130
+          Height = 21
+          Top = 51
+          Width = 70
+          MaxValue = 100000
+          OnChange = CheckBox3Change
+          TabOrder = 5
+          Value = 100
+        end
+        object Label17: TLabel
+          Left = 202
+          Height = 14
+          Top = 56
+          Width = 14
+          Caption = 'ms'
+          ParentColor = False
+        end
+        object Button5: TButton
+          Left = 8
+          Height = 25
+          Top = 80
+          Width = 115
+          Caption = 'Raise exception'
+          OnClick = Button5Click
+          TabOrder = 6
+        end
+        object CheckBox4: TCheckBox
+          Left = 6
+          Height = 17
+          Top = 110
+          Width = 123
+          Caption = 'Wait in critical section'
+          OnChange = CheckBox4Change
+          TabOrder = 7
+        end
+        object SpinEdit6: TSpinEdit
+          Left = 186
+          Height = 21
+          Top = 104
+          Width = 70
+          MaxValue = 100000
+          OnChange = CheckBox4Change
+          TabOrder = 8
+          Value = 100
+        end
+        object Label18: TLabel
+          Left = 264
+          Height = 14
+          Top = 110
+          Width = 14
+          Caption = 'ms'
+          ParentColor = False
+        end
+      end
+      object Button6: TButton
+        Left = 9
+        Height = 25
+        Top = 38
+        Width = 121
+        Caption = 'Add method workers'
+        OnClick = Button6Click
+        TabOrder = 7
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Testing'
+      ClientHeight = 492
+      ClientWidth = 798
+      object ButtonShowThreadId: TButton
+        Left = 14
+        Height = 25
+        Top = 47
+        Width = 147
+        Caption = 'Show thread id'
+        OnClick = ButtonShowThreadIdClick
+        TabOrder = 0
+      end
+      object ButtonGetMaxThread: TButton
+        Left = 14
+        Height = 25
+        Top = 79
+        Width = 147
+        Caption = 'Get max TThread count'
+        OnClick = ButtonGetMaxThreadClick
+        TabOrder = 1
+      end
+      object Label2: TLabel
+        Left = 102
+        Height = 14
+        Top = 135
+        Width = 13
+        Caption = '    '
+        ParentColor = False
+      end
+      object Button2: TButton
+        Left = 14
+        Height = 25
+        Top = 15
+        Width = 147
+        Caption = 'Read stack frame info'
+        OnClick = Button2Click
+        TabOrder = 2
+      end
+      object Label11: TLabel
+        Left = 15
+        Height = 14
+        Top = 135
+        Width = 70
+        Caption = 'Precision time:'
+        ParentColor = False
+      end
+    end
+  end
+  object TimerRedraw: TTimer
+    Interval = 100
+    OnTimer = TimerRedrawTimer
+    left = 427
+    top = 115
+  end
+  object MainMenu1: TMainMenu
+    left = 512
+    top = 115
+    object MenuItem1: TMenuItem
+      Caption = 'New Item1'
+      object MenuItem2: TMenuItem
+        Caption = 'New Item2'
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'New Item4'
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'New Item3'
+    end
+  end
+end

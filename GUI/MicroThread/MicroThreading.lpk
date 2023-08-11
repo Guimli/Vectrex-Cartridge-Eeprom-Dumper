@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Package Version="3">
+    <Name Value="MicroThreading"/>
+    <Author Value="Chronos (robie@centrum.cz)"/>
+    <CompilerOptions>
+      <Version Value="9"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="Other"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Other>
+        <CompilerMessages>
+          <UseMsgFile Value="True"/>
+        </CompilerMessages>
+        <CompilerPath Value="$(CompPath)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Micro threading subsystem. "/>
+    <License Value="GNU/GPL"/>
+    <Version Minor="2"/>
+    <Files Count="6">
+      <Item1>
+        <Filename Value="UMicroThreading.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="UMicroThreading"/>
+      </Item1>
+      <Item2>
+        <Filename Value="UPlatform.pas"/>
+        <UnitName Value="UPlatform"/>
+      </Item2>
+      <Item3>
+        <Filename Value="ReadMe.txt"/>
+        <Type Value="Binary"/>
+      </Item3>
+      <Item4>
+        <Filename Value="UMicroThreadList.pas"/>
+        <UnitName Value="UMicroThreadList"/>
+      </Item4>
+      <Item5>
+        <Filename Value="UThreadEx.pas"/>
+        <UnitName Value="UThreadEx"/>
+      </Item5>
+      <Item6>
+        <Filename Value="UMicroThreadCallStack.pas"/>
+        <UnitName Value="UMicroThreadCallStack"/>
+      </Item6>
+    </Files>
+    <Type Value="RunAndDesignTime"/>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="ExceptionLogger"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

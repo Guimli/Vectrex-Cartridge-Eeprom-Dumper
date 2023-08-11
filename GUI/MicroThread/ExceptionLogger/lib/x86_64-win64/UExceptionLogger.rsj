@@ -1,0 +1,9 @@
+{"version":1,"strings":[
+{"hash":4860067,"name":"uexceptionlogger.sexceptionclass","sourcebytes":[67,108,97,115,115],"value":"Class"},
+{"hash":63608709,"name":"uexceptionlogger.smessage","sourcebytes":[77,101,115,115,97,103,101],"value":"Message"},
+{"hash":265345406,"name":"uexceptionlogger.sapplication","sourcebytes":[65,112,112,108,105,99,97,116,105,111,110],"value":"Application"},
+{"hash":372789,"name":"uexceptionlogger.stime","sourcebytes":[84,105,109,101],"value":"Time"},
+{"hash":164572548,"name":"uexceptionlogger.sprocessid","sourcebytes":[80,114,111,99,101,115,115,32,73,68],"value":"Process ID"},
+{"hash":146226724,"name":"uexceptionlogger.sthreadid","sourcebytes":[84,104,114,101,97,100,32,73,68],"value":"Thread ID"},
+{"hash":214540302,"name":"uexceptionlogger.sversion","sourcebytes":[86,101,114,115,105,111,110],"value":"Version"}
+]}

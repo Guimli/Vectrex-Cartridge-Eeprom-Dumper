@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "Vectrex")(type "KiCad")(uri "C:/Users/Guimli/Documents/Vectrex/PCB Cartridge/Kicad6 v2 Standard 32K eeprom/Programmer/Programmer")(options "")(descr ""))
+  (lib (name "Programmer")(type "KiCad")(uri "C:/Users/Guimli/Documents/Vectrex/PCB Cartridge/Kicad6 v2 Standard 32K eeprom/Programmer.pretty")(options "")(descr ""))
+  (lib (name "SSD1309")(type "KiCad")(uri "${KIPRJMOD}/SSD1309.pretty")(options "")(descr ""))
+)
